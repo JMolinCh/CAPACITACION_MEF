@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+.env
+venv/
+env/
+.idea/
+.vscode/
+
+# Dump / Temporary testing files
+page.html
+registro_page.html
+mef_index.html
+cookies.txt
+primefaces.js
+comun.js
+test_rsede.py
