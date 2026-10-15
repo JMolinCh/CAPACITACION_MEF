@@ -175,11 +175,21 @@ class InscriptionRequest(BaseModel):
 
 @app.get("/", response_class=HTMLResponse)
 def get_index():
-    index_file = os.path.join(STATIC_DIR, "index.html")
-    if os.path.exists(index_file):
-        with open(index_file, "r", encoding="utf-8") as f:
-            return HTMLResponse(content=f.read())
-    return HTMLResponse("<h1>Cursos MEF - Panel en preparaci\u00f3n</h1>")
+    candidates = [
+        os.path.join(BASE_DIR, "index.html"),
+        os.path.join(STATIC_DIR, "index.html")
+    ]
+    for c in candidates:
+        if os.path.exists(c):
+            with open(c, "r", encoding="utf-8") as f:
+                return HTMLResponse(content=f.read())
+    return HTMLResponse("<h1>Cursos MEF - Panel en preparación</h1>")
+
+@app.get("/data/cursos.json")
+def get_cursos_json_direct():
+    if os.path.exists(DATA_FILE):
+        return FileResponse(DATA_FILE, media_type="application/json")
+    return JSONResponse(status_code=404, content={"error": "data/cursos.json not found"})
 
 @app.get("/api/cursos")
 def get_cursos():

@@ -77,17 +77,46 @@ def clean_region_name(raw_text: str) -> str:
     return clean_spanish_text(raw).title()
 
 def init_driver():
-    options = Options()
-    options.add_argument("--headless")
-    options.add_argument("--window-size=1920,1080")
-    options.add_argument("--disable-gpu")
-    options.add_argument("--disable-extensions")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--blink-settings=imagesEnabled=false")
-    options.add_experimental_option("excludeSwitches", ["enable-logging"])
-    driver = webdriver.Edge(options=options)
-    driver.set_page_load_timeout(35)
-    return driver
+    # If on Windows, try Edge first (standard on Windows), then Chrome
+    # If on Linux (e.g. GitHub Actions runner), try Chrome first, then Edge
+    drivers_to_try = ["edge", "chrome"] if sys.platform.startswith("win") else ["chrome", "edge"]
+    last_err = None
+
+    for browser in drivers_to_try:
+        try:
+            if browser == "edge":
+                from selenium.webdriver.edge.options import Options as EdgeOptions
+                options = EdgeOptions()
+                options.add_argument("--headless")
+                options.add_argument("--window-size=1920,1080")
+                options.add_argument("--disable-gpu")
+                options.add_argument("--disable-extensions")
+                options.add_argument("--no-sandbox")
+                options.add_argument("--disable-dev-shm-usage")
+                options.add_argument("--blink-settings=imagesEnabled=false")
+                options.add_experimental_option("excludeSwitches", ["enable-logging"])
+                driver = webdriver.Edge(options=options)
+                driver.set_page_load_timeout(35)
+                return driver
+            elif browser == "chrome":
+                from selenium.webdriver.chrome.options import Options as ChromeOptions
+                options = ChromeOptions()
+                options.add_argument("--headless=new")
+                options.add_argument("--window-size=1920,1080")
+                options.add_argument("--disable-gpu")
+                options.add_argument("--disable-extensions")
+                options.add_argument("--no-sandbox")
+                options.add_argument("--disable-dev-shm-usage")
+                options.add_argument("--blink-settings=imagesEnabled=false")
+                options.add_experimental_option("excludeSwitches", ["enable-logging"])
+                driver = webdriver.Chrome(options=options)
+                driver.set_page_load_timeout(35)
+                return driver
+        except Exception as e:
+            last_err = e
+            continue
+
+    raise RuntimeError(f"No se pudo inicializar ningún navegador (Edge o Chrome): {last_err}")
 
 def scrape_all_courses(progress_callback=None):
     """

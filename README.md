@@ -4,7 +4,20 @@ Este proyecto permite visualizar **todos los cursos de capacitación del Ministe
 
 ---
 
-## 🚀 Cómo iniciar el sistema
+## 🌐 Ver en línea (GitHub Pages)
+
+Puedes acceder a la versión web directamente sin instalar nada:
+👉 **[https://vidos3010.github.io/CAPACITACION_MEF/](https://vidos3010.github.io/CAPACITACION_MEF/)**
+
+> ⚙️ **Configuración en GitHub Pages (solo una vez):**
+> 1. Ve a la pestaña **Settings** de este repositorio en GitHub.
+> 2. En el menú izquierdo, haz clic en **Pages**.
+> 3. En **Build and deployment > Branch**, selecciona `main` y la carpeta `/ (root)`.
+> 4. Haz clic en **Save**. ¡Listo! En 1 minuto tu aplicación web estará activa.
+
+---
+
+## 🚀 Cómo iniciar el sistema localmente en Windows
 
 Simplemente haz doble clic en el archivo:
 ```
@@ -29,20 +42,20 @@ Esto abrirá automáticamente tu navegador en:
    - **Filtros rápidos:** Solo Cursos de Hoy, Solo Virtuales, Presenciales, o por Región específica.
    - **Vistas intercambiables:** Vista de Tarjetas modernas o Vista de Tabla compacta.
 
-4. **🔄 Actualización en 1 Clic & Sincronización Automática**:
-   - Botón **"Actualizar Cursos"** en la interfaz que consulta el portal oficial del MEF en tiempo real con barra de progreso.
-   - Sincronización automática periódica en segundo plano.
+4. **🔄 Actualización Automática con GitHub Actions**:
+   - Un flujo automatizado (`.github/workflows/actualizar_cursos.yml`) ejecuta el extractor todos los días a las **06:00 AM** y **12:00 PM** (hora de Perú), actualizando la base de datos automáticamente.
 
-5. **📋 Herramientas de Compartir e Inscripción**:
-   - **Compartir por WhatsApp/Teams:** Copia con un clic un resumen formateado del curso con horarios y enlace.
-   - **Guía de Inscripción:** Al hacer clic en "Inscribirme en MEF", te indica la región y código exacto y te dirige al portal oficial para registrar tu DNI.
+5. **📋 Modal de Instrucciones y Enlace MEF**:
+   - Al hacer clic en cualquier curso, se abre una ventana con los 4 pasos claros para inscribirse en RegistraMEF y el botón directo para abrir el portal oficial.
 
 ---
 
 ## 📁 Estructura del Proyecto
 
-- `iniciar_servidor.bat`: Lanzador rápido para Windows con 1 doble clic.
-- `server.py`: Servidor FastAPI que gestiona los datos, el cálculo de estados y los endpoints.
-- `scraper.py`: Motor de extracción automatizada con Edge Headless para las 27 regiones.
-- `static/index.html`: Interfaz web moderna (Tailwind CSS, diseño responsivo, iconos Lucide).
-- `data/cursos.json`: Base de datos local en caché de todas las capacitaciones activas.
+- `index.html`: Aplicación web principal (Tailwind CSS, diseño responsivo, iconos Lucide).
+- `server.py`: Servidor FastAPI para ejecución local con scheduler de fondo.
+- `scraper.py`: Motor de extracción automatizada compatible con Edge y Chrome.
+- `data/cursos.json`: Base de datos de capacitaciones activas.
+- `iniciar_servidor.bat`: Lanzador rápido para Windows.
+- `.github/workflows/actualizar_cursos.yml`: Automatización diaria de extracción en GitHub.
+- `requirements.txt`: Dependencias del proyecto.

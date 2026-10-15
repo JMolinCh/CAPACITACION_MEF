@@ -577,11 +577,31 @@
     setInterval(updateClock, 1000);
     updateClock();
 
-    // Load initial data
+    // Load initial data (Supports local FastAPI & Static GitHub Pages)
     async function cargarCursos() {
       try {
-        const res = await fetch('/api/cursos');
-        const data = await res.json();
+        let data = null;
+
+        // 1. Intentar API local dinámica de FastAPI (/api/cursos)
+        try {
+          const res = await fetch('/api/cursos');
+          if (res.ok) {
+            data = await res.json();
+          }
+        } catch (err) {
+          // Ignorar si no hay API local (GitHub Pages)
+        }
+
+        // 2. Si no hay API o dio error, cargar directo desde ./data/cursos.json
+        if (!data || !data.courses) {
+          const resStatic = await fetch('./data/cursos.json');
+          if (resStatic.ok) {
+            const rawData = await resStatic.json();
+            data = procesarDatosEstaticos(rawData);
+          } else {
+            throw new Error("No se pudo cargar data/cursos.json");
+          }
+        }
 
         if (data.is_loading) {
           mostrarProgreso("Sincronizando con las 27 regiones de RegistraMEF...", 25);
@@ -609,6 +629,81 @@
       } catch (err) {
         console.error("Error al cargar cursos:", err);
       }
+    }
+
+    // Calcula estados en tiempo real (¡En vivo ahora!, Hoy, etc.) para GitHub Pages
+    function procesarDatosEstaticos(rawData) {
+      const now = new Date();
+      let today_str, today_iso, cur_hm;
+      try {
+        const dFmt = new Intl.DateTimeFormat('es-PE', { timeZone: 'America/Lima', year: 'numeric', month: '2-digit', day: '2-digit' });
+        const parts = dFmt.formatToParts(now);
+        const d = parts.find(p => p.type === 'day').value;
+        const m = parts.find(p => p.type === 'month').value;
+        const y = parts.find(p => p.type === 'year').value;
+        today_str = `${d}/${m}/${y}`;
+        today_iso = `${y}-${m}-${d}`;
+
+        const tFmt = new Intl.DateTimeFormat('es-PE', { timeZone: 'America/Lima', hour: '2-digit', minute: '2-digit', hour12: false });
+        const tParts = tFmt.formatToParts(now);
+        const h = tParts.find(p => p.type === 'hour').value;
+        const min = tParts.find(p => p.type === 'minute').value;
+        cur_hm = `${h}:${min}`;
+      } catch (e) {
+        today_str = now.toLocaleDateString('es-PE');
+        today_iso = now.toISOString().split('T')[0];
+        cur_hm = now.toTimeString().slice(0, 5);
+      }
+
+      const courses = rawData.courses || [];
+      let today_count = 0;
+      let virtual_count = 0;
+      const regionsSet = new Set();
+
+      courses.forEach(c => {
+        const fecha = c.fecha || '';
+        const fecha_iso = c.fecha_iso || '';
+        const h_ini = c.hora_inicio || '';
+        const h_fin = c.hora_fin || '';
+
+        const is_today = (fecha === today_str);
+        c.es_hoy = is_today;
+        if (is_today) today_count++;
+        if (c.es_virtual) virtual_count++;
+        if (c.region) regionsSet.add(c.region);
+
+        let estado = "Próximamente";
+        if (fecha_iso) {
+          if (fecha_iso < today_iso) {
+            estado = "Finalizado";
+          } else if (fecha_iso === today_iso) {
+            if (h_ini && h_fin) {
+              if (cur_hm < h_ini) {
+                estado = "Hoy (Por iniciar)";
+              } else if (cur_hm >= h_ini && cur_hm <= h_fin) {
+                estado = "¡En vivo ahora!";
+              } else {
+                estado = "Finalizó hoy";
+              }
+            } else {
+              estado = "Hoy";
+            }
+          }
+        }
+        c.estado = estado;
+      });
+
+      return {
+        success: true,
+        courses: courses,
+        total_courses: courses.length,
+        today_courses_count: today_count,
+        virtual_count: virtual_count,
+        presencial_count: courses.length - virtual_count,
+        regions_with_courses_count: regionsSet.size,
+        today_date: today_str,
+        last_updated_human: rawData.last_updated_human || rawData.last_updated || 'Reciente'
+      };
     }
 
     // Populate Region Select
@@ -953,15 +1048,24 @@
 
       try {
         const res = await fetch('/api/actualizar', { method: 'POST' });
-        const data = await res.json();
-        iniciarPolling();
+        if (res.ok) {
+          const data = await res.json();
+          iniciarPolling();
+          return;
+        }
       } catch (e) {
+        // Fallback for GitHub Pages
+      }
+
+      // Si está en GitHub Pages (modo estático)
+      setTimeout(async () => {
         ocultarProgreso();
         btn.disabled = false;
         icon.classList.remove('animate-spin');
         text.textContent = 'Sincronizar Cursos';
-        mostrarToast("Error al iniciar actualización.");
-      }
+        await cargarCursos();
+        mostrarToast("En GitHub Pages los cursos se sincronizan a diario con GitHub Actions.");
+      }, 700);
     }
 
     function iniciarPolling() {
@@ -969,6 +1073,7 @@
       pollInterval = setInterval(async () => {
         try {
           const res = await fetch('/api/actualizar/status');
+          if (!res.ok) throw new Error("Status endpoint no disponible");
           const st = await res.json();
 
           mostrarProgreso(st.message || "Extrayendo capacitaciones...", st.progress || 20);
@@ -992,6 +1097,12 @@
           clearInterval(pollInterval);
           pollInterval = null;
           ocultarProgreso();
+          const btn = document.getElementById('btn-actualizar');
+          const icon = document.getElementById('icon-refresh');
+          const text = document.getElementById('text-actualizar');
+          btn.disabled = false;
+          icon.classList.remove('animate-spin');
+          text.textContent = 'Sincronizar Cursos';
         }
       }, 1000);
     }
