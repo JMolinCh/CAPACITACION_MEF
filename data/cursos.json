@@ -1,11 +1,11 @@
 {
   "success": true,
-  "last_updated": "2026-10-15 20:15:00",
-  "last_updated_human": "15/10/2026 08:15 PM",
-  "today_date": "15/10/2026",
-  "elapsed_seconds": 43.2,
+  "last_updated": "2026-10-16 15:05:24",
+  "last_updated_human": "16/10/2026 03:05 PM",
+  "today_date": "16/10/2026",
+  "elapsed_seconds": 43.6,
   "total_courses": 6,
-  "today_courses_count": 0,
+  "today_courses_count": 2,
   "virtual_count": 4,
   "presencial_count": 2,
   "regions_with_courses_count": 2,
@@ -24,8 +24,8 @@
       "lugar": "AMAZONAS - AUDITORIO DE LA MUNICIPALIDAD PROVINCIAL DE BAGUA",
       "modalidad": "Presencial",
       "es_virtual": false,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "Finalizó hoy",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -42,8 +42,8 @@
       "lugar": "AMAZONAS - AUDITORIO DE LA MUNICIPALIDAD PROVINCIAL DE BAGUA",
       "modalidad": "Presencial",
       "es_virtual": false,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "Finalizó hoy",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
