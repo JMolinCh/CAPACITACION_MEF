@@ -1,51 +1,15 @@
 {
   "success": true,
-  "last_updated": "2026-10-20 20:24:52",
-  "last_updated_human": "20/10/2026 08:24 PM",
-  "today_date": "20/10/2026",
-  "elapsed_seconds": 44.9,
-  "total_courses": 54,
-  "today_courses_count": 0,
-  "virtual_count": 54,
+  "last_updated": "2026-10-21 15:47:20",
+  "last_updated_human": "21/10/2026 03:47 PM",
+  "today_date": "21/10/2026",
+  "elapsed_seconds": 55.8,
+  "total_courses": 52,
+  "today_courses_count": 25,
+  "virtual_count": 52,
   "presencial_count": 0,
   "regions_with_courses_count": 27,
   "courses": [
-    {
-      "id": "18145_idFormMenu-j_idt14-0-j_idt15",
-      "codigo": "18145",
-      "titulo": "INTERVENCIONES ECONÓMICAS",
-      "region": "Amazonas",
-      "region_id": "idFormMenu-j_idt14-0-j_idt15",
-      "fecha": "21/10/2026",
-      "fecha_iso": "2026-10-21",
-      "hora_inicio": "10:00",
-      "hora_fin": "13:00",
-      "horario": "10:00 a 13:00",
-      "lugar": "CAPACITACION VIRTUAL",
-      "modalidad": "Virtual",
-      "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
-      "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
-    },
-    {
-      "id": "18145_idFormMenu-j_idt14-1-j_idt16",
-      "codigo": "18145",
-      "titulo": "INTERVENCIONES ECONÓMICAS",
-      "region": "Áncash - Huaraz",
-      "region_id": "idFormMenu-j_idt14-1-j_idt16",
-      "fecha": "21/10/2026",
-      "fecha_iso": "2026-10-21",
-      "hora_inicio": "10:00",
-      "hora_fin": "13:00",
-      "horario": "10:00 a 13:00",
-      "lugar": "CAPACITACION VIRTUAL",
-      "modalidad": "Virtual",
-      "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
-      "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
-    },
     {
       "id": "18132_idFormMenu-j_idt14-3-j_idt16",
       "codigo": "18132",
@@ -60,8 +24,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -78,8 +42,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -96,8 +60,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -114,8 +78,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -132,8 +96,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -150,8 +114,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -168,8 +132,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -186,8 +150,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -204,8 +168,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -222,8 +186,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -240,8 +204,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -258,8 +222,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -276,8 +240,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -294,8 +258,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -312,8 +276,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -330,8 +294,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -348,8 +312,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -366,8 +330,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -384,8 +348,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -402,8 +366,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -420,8 +384,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -438,8 +402,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -456,8 +420,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -474,8 +438,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -492,8 +456,8 @@
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
-      "es_hoy": false,
-      "estado": "Próximamente",
+      "es_hoy": true,
+      "estado": "¡En vivo ahora!",
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
@@ -947,16 +911,16 @@
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
-      "id": "18144_idFormMenu-j_idt14-0-j_idt15",
-      "codigo": "18144",
-      "titulo": "ACTIVOS Y PASIVOS",
+      "id": "18145_idFormMenu-j_idt14-0-j_idt15",
+      "codigo": "18145",
+      "titulo": "INTERVENCIONES ECONÓMICAS",
       "region": "Amazonas",
       "region_id": "idFormMenu-j_idt14-0-j_idt15",
-      "fecha": "23/10/2026",
-      "fecha_iso": "2026-10-23",
-      "hora_inicio": "09:30",
+      "fecha": "28/10/2026",
+      "fecha_iso": "2026-10-28",
+      "hora_inicio": "10:00",
       "hora_fin": "13:00",
-      "horario": "09:30 a 13:00",
+      "horario": "10:00 a 13:00",
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
@@ -965,16 +929,16 @@
       "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
     },
     {
-      "id": "18144_idFormMenu-j_idt14-1-j_idt16",
-      "codigo": "18144",
-      "titulo": "ACTIVOS Y PASIVOS",
+      "id": "18145_idFormMenu-j_idt14-1-j_idt16",
+      "codigo": "18145",
+      "titulo": "INTERVENCIONES ECONÓMICAS",
       "region": "Áncash - Huaraz",
       "region_id": "idFormMenu-j_idt14-1-j_idt16",
-      "fecha": "23/10/2026",
-      "fecha_iso": "2026-10-23",
-      "hora_inicio": "09:30",
+      "fecha": "28/10/2026",
+      "fecha_iso": "2026-10-28",
+      "hora_inicio": "10:00",
       "hora_fin": "13:00",
-      "horario": "09:30 a 13:00",
+      "horario": "10:00 a 13:00",
       "lugar": "CAPACITACION VIRTUAL",
       "modalidad": "Virtual",
       "es_virtual": true,
