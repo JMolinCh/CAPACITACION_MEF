@@ -1,50 +1,13 @@
 {
   "success": true,
-  "last_updated": "2026-10-28 16:55:41",
-  "last_updated_human": "28/10/2026 04:55 PM",
+  "last_updated": "2026-10-28 21:35:41",
+  "last_updated_human": "28/10/2026 09:35 PM",
   "today_date": "28/10/2026",
-  "elapsed_seconds": 56.5,
-  "total_courses": 2,
-  "today_courses_count": 2,
-  "virtual_count": 2,
+  "elapsed_seconds": 50.3,
+  "total_courses": 0,
+  "today_courses_count": 0,
+  "virtual_count": 0,
   "presencial_count": 0,
-  "regions_with_courses_count": 2,
-  "courses": [
-    {
-      "id": "18145_idFormMenu-j_idt14-0-j_idt15",
-      "codigo": "18145",
-      "titulo": "INTERVENCIONES ECONÓMICAS",
-      "region": "Amazonas",
-      "region_id": "idFormMenu-j_idt14-0-j_idt15",
-      "fecha": "28/10/2026",
-      "fecha_iso": "2026-10-28",
-      "hora_inicio": "10:00",
-      "hora_fin": "13:00",
-      "horario": "10:00 a 13:00",
-      "lugar": "CAPACITACION VIRTUAL",
-      "modalidad": "Virtual",
-      "es_virtual": true,
-      "es_hoy": true,
-      "estado": "Finalizó hoy",
-      "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
-    },
-    {
-      "id": "18145_idFormMenu-j_idt14-1-j_idt16",
-      "codigo": "18145",
-      "titulo": "INTERVENCIONES ECONÓMICAS",
-      "region": "Áncash - Huaraz",
-      "region_id": "idFormMenu-j_idt14-1-j_idt16",
-      "fecha": "28/10/2026",
-      "fecha_iso": "2026-10-28",
-      "hora_inicio": "10:00",
-      "hora_fin": "13:00",
-      "horario": "10:00 a 13:00",
-      "lugar": "CAPACITACION VIRTUAL",
-      "modalidad": "Virtual",
-      "es_virtual": true,
-      "es_hoy": true,
-      "estado": "Finalizó hoy",
-      "mef_url": "https://apps4.mineco.gob.pe/registramef/servicioInscripcion/dtCapacitacionExtView.htm"
-    }
-  ]
+  "regions_with_courses_count": 0,
+  "courses": []
 }
